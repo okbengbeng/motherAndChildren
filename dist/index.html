@@ -3,6 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/comment.css"/>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/aside.css"/>
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
 		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
 	</head>
@@ -12,7 +15,7 @@
 			<ul>
 				<li class="user">
 					<span class="asid_pic"></span>
-					<div class="aside_top">
+					<div class="aside_top commonAside">
 						<div><img src="images/userimg.jpg"/></div>
 						<p>你好，母婴之家用户,请<span>登录</span><span>注册</span></p>
 						<span class="span_gone">X</span>
@@ -22,7 +25,7 @@
 				<li><span class="asid_pic"></span></li>
 				<li class="user">
 					<span class="asid_pic"></span>
-					<div class="aside_top">
+					<div class="aside_top commonAside">
 						<div><img src="images/userimg.jpg"/></div>
 						<p>你好，母婴之家用户,请<span>登录</span><span>注册</span></p>
 						<span class="span_gone">X</span>
@@ -31,23 +34,20 @@
 				<li>
 					<span class="asid_pic"></span>
 					<p>在线客服</p>
-					<div class="aside_center">
+					<div class="aside_center commonAside">
 						客服
 					</div>
 				</li>
 				<li>
 					<span class="asid_pic"></span>
-					<div class="aside_bottom">
+					<div class="aside_bottom commonAside">
 						返回顶部
 					</div>
 				</li>
-			</ul>
-			
-			
-			
+			</ul>	
 		</div>
 		<div class="submitBox">
-			<h3>你尚未登录<span>X</span></h3>
+			<h3>你尚未登录<span class="span_gone">X</span></h3>
 			<div class="submitBox_center">
 				<label for="username">账户名
 					<input type="text" name="username" id="username" />
@@ -69,6 +69,91 @@
 				<p><span></span> 新浪微博</p>
 				<p><span></span> 支付宝</p>
 				<p><span></span> QQ</p>
+			</div>
+		</div>
+		<!--顶部导航栏-->
+		<div id="top_wrap">
+			<div id="top_nav">
+				<ul class="top_left">
+					<li>母婴之家</li>
+					<li>母婴海淘</li>
+					<li><span></span>手机版</li>
+				</ul>
+				<ul class="top_right">
+					<li>
+						欢迎来到母婴之家！
+						<span>[登录]</span>
+						<span>[免费注册]</span>
+					</li>
+					<li>我的订单</li>
+					<li>客户服务</li>
+					<li>商务合作</li>
+					<li>分类导航</li>
+				</ul>
+			</div>
+		</div>	
+		<!--header-->
+		<div id="header_wrap">
+			<header>
+				<div class="logo">
+					<a href="http://www.muyingzhijia.com/"><img src="images/logo29new.png"/></a>
+				</div>
+				<ul>
+					<li>
+						<div></div>
+						<p>全球精选正品</p>
+					</li>
+					<li>
+						<div></div>
+						<p>白领妈妈推荐</p>
+					</li>
+					<li>
+						<div></div>
+						<p>专注母婴13年</p>
+					</li>
+				</ul>
+				<div class="header_right">
+					<div>
+						<input type="text" name="header_text" id="header_text" placeholder="搜索 母婴之家 商品/品牌" />
+						<input type="button" name="header_btn" id="header_btn" />
+					</div>
+					<p>热门搜索：<a>爱他美</a><a>美德乐</a><a>口罩</a><a>保温杯</a><a>澳洲直邮</a><a>睡袋</a><a>暖奶器</a><a>奶瓶</a></p>
+				</div>
+			</header>	
+		</div>
+		<!--nav-->
+		<div id="nav_wrap">
+			<nav>
+				<ul>
+					<li><a href="">全部商品分类</a></li>
+					<li><a href="">首页</a></li>
+					<li><a href="">幸运星期一</a></li>
+					<li><a href="">直邮专区</a></li>
+					<li><a href="">品牌专区</a></li>
+					<li><a href="">会员俱乐部</a></li>
+				</ul>
+			</nav>
+			<div></div>
+		</div>
+		<!--banner-->	
+		<div id="banner_wrap">
+			<div id="banner">
+				<ul>
+					<li><a href=""><img src="images/20180313134502_10_1090-350.jpg"/></a></li>
+					<li><a href=""><img src="images/20180410135755_10_heinz1090.jpg"/></a></li>
+					<li><a href=""><img src="images/20180410172907_10_tommee.jpg"/></a></li>
+					<li><a href=""><img src="images/20180426095410_10_alula1090.jpg"/></a></li>
+					<li><a href=""><img src="images/20180427172259_10_babymore.jpg"/></a></li>
+					<li><a href=""><img src="images/20180504160802_10_20170519173556_10_1090x1350.jpg"/></a></li>
+				</ul>
+				<div class="banner_page">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
 			</div>
 		</div>
 	</body>
