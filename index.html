@@ -51,10 +51,10 @@
 			<h3>你尚未登录<span class="span_gone">X</span></h3>
 			<div class="submitBox_center">
 				<label for="username">账户名
-					<input type="text" name="username" id="username" />
+					<input type="text" name="username" id="username" placeholder="亲输入邮箱或手机号码"/>
 				</label>
 				<label for="password">密　码
-					<input type="password" name="passsword" id="password" />
+					<input type="password" name="passsword" id="password" placeholder="亲输入密码"/>
 				</label>
 				<label for="freeSub">记住我（30天内免登录）
 					<input type="checkbox" id="freeSub"/>
@@ -77,8 +77,13 @@
 			<div id="top_nav">
 				<ul class="top_left">
 					<li>母婴之家</li>
-					<li>母婴海淘</li>
-					<li><span></span>手机版</li>
+					<li><a href="">母婴海淘</a></li>
+					<li>
+						<a href=""><span></span>手机版</a>
+						<div>
+							<a href=""></a>
+						</div>						
+					</li>
 				</ul>
 				<ul class="top_right">
 					<li>
@@ -86,10 +91,35 @@
 						<span>[登录]</span>
 						<span>[免费注册]</span>
 					</li>
-					<li>我的订单</li>
-					<li>客户服务</li>
-					<li>商务合作</li>
-					<li>分类导航</li>
+					<li>
+						<a href="">我的订单
+							<div class="triangle">
+								<b class="down_triangle"></b>
+								<b class="up_triangle"></b>
+							</div>
+						</a>
+						<div>
+							<a href="">我的家</a>
+							<a href="">我的提问</a>
+							<a href="">我的评论</a>
+							<a href="">我的收藏</a>
+							<a href="">我的幸运星</a>
+						</div>
+					</li>
+					<li>
+						<a href="">客户服务
+							<div class="triangle">
+								<b class="down_triangle"></b>
+								<b class="up_triangle"></b>
+							</div>
+						</a>
+						<div>
+							<a href="">在线客服</a>
+							<a href="">帮助中心</a>
+						</div>
+					</li>
+					<li><a href="">商务合作</a></li>
+					<li><a href="">分类导航</a></li>
 				</ul>
 			</div>
 		</div>	
@@ -158,7 +188,7 @@
 				</div>
 			</div>
 		</div>
-		<!--main-->
+		<!--main_top-->
 		<div id="main_top">
 			<ul>
 				<li><img src="images/20170119165431_10_nf.jpg" /></li>
@@ -166,11 +196,64 @@
 				<li><img src="images/20160817162639_10_qq.jpg" /></li>
 			</ul>
 		</div>		
+		<!--main_center-->
 		<div id="main_center">
+			<div class="title">
+				<div class="title_line"></div>
+				<h3>特惠<span>专场</span></h3>
+				<p>Special deals</p>
+			</div>
+			<section>
+				<div class="content">
+					<div class="section_left">
+						<img src="images/20171127142202_10_1182.jpg"/>
+					</div>
+					<div class="section_right">
+						<h3>NUK88减5/158减10/299减20</h3>
+						<p>NUK靓丽印花玻璃材质奶瓶宝宝妈妈都喜爱</p>
+						<div>
+							<div>￥89<span>起</span></div>
+							<a href="">点击进入</a>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
 			
 		</div>
+		<!--main_bottom-->
 		<div id="main_bottom">
-			
+			<div class="title">
+				<div class="title_line"></div>
+				<h3>品牌<span>专栏</span></h3>
+				<p>Brand column</p>
+			</div>
+			<div>
+				<div class="brand_left">
+					<img src="images/20160704125336_10_20160328110347_10_leftdown-1.jpg"/>
+					<img src="images/20180322103042_10_20160704125251_10_20160531173724_10_20150701102116_1619_370x160-1.jpg"/>
+				</div>
+				<div class="brand_right">
+					<a href=""><img src="images/wyeth.jpg"/></a>
+					<a href=""><img src="images/wyeth.jpg"/></a>
+					<a href=""><img src="images/wyeth.jpg"/></a>
+					<a href=""><img src="images/wyeth.jpg"/></a>
+					<a href=""><img src="images/wyeth.jpg"/></a>
+					<a href=""><img src="images/wyeth.jpg"/></a>
+					<a href=""><img src="images/wyeth.jpg"/></a>
+					<a href=""><img src="images/wyeth.jpg"/></a>
+					<a href=""><img src="images/wyeth.jpg"/></a>
+					<a href=""><img src="images/wyeth.jpg"/></a>
+					<a href=""><img src="images/wyeth.jpg"/></a>
+					<a href=""><img src="images/wyeth.jpg"/></a>
+					<a href=""><img src="images/wyeth.jpg"/></a>
+					<a href=""><img src="images/wyeth.jpg"/></a>
+					<a href=""><img src="images/wyeth.jpg"/></a>
+					<a href=""><img src="images/wyeth.jpg"/></a>
+				</div>
+				
+			</div>
 		</div>
 		<!--footer-->
 		<footer>
@@ -263,4 +346,5 @@
 	</body>
 	<script src="js/aside.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/carousel.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
 </html>
