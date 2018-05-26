@@ -1,4 +1,4 @@
-#banner{
+#banner,#main_top{
     width: 1090px;
     margin: 0 auto;
 }
@@ -12,20 +12,19 @@ $banner_width:1090px;
     height: 350px;
     overflow: hidden;
     position: relative;
-    z-index: -1;
     ul{
         position: absolute;
-        width: $banner_width*6;
+        width: $banner_width*7;
         height: 350px;
         li{
             float: left;
-        }
-    }
+        };
+    };
     .banner_page{
         position: absolute;
         bottom: 10px;
         left: 500px;
-        width: 144px;
+        width: 142px;
         height: 19px;
         border-radius: 10px;
         background: #ddd;
@@ -35,17 +34,22 @@ $banner_width:1090px;
             height: 12px;
             margin: 3px 0 0 10px;
             background: #fff;
-            border-radius: 50%;
-            
+            border-radius: 50%;  
+        };
+        div.hover{
+            background: red;
         }
     }
 }
-
-
-
-
-
-
+#main_top{
+    margin: 20px auto;
+    height: 152px;
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
 
 
 

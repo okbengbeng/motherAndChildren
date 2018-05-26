@@ -18,7 +18,4 @@ $(function(){
 		.find(".asid_pic").css({"background-position-x":0})
 	})
 	
-	
-	
-	
 })
