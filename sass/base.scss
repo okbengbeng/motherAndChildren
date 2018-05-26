@@ -71,7 +71,8 @@
                 &>div{
                     position: absolute;
                     left: 20px;
-                    top: 32px;
+                    top: 36px;
+                    z-index: 1;
                     display: none;
                     a{
                         display: block;
@@ -102,15 +103,17 @@
                 display: block;
                 height: 27px;
                 line-height: 27px;
+                padding: 0 5px;
                 margin-top: -5px;
                 position: relative;
+                border: 1px solid #eee;
                 z-index: 1;
             }
             &>div{
                 position: absolute;
                 display: none;
-                top: 16px;
-                width: 62px;
+                top: 23px;
+                width: 68px;
                 background: #fff;
                 border: 1px solid orange;
                 a{
@@ -118,6 +121,7 @@
                     height: 20px;
                     line-height: 20px;
                     font-size: 12px;
+                    padding: 0 5px;
                 }  
             }
         };
@@ -205,6 +209,9 @@ header{
                 margin-right: 10px;
                 &:nth-of-type(1){
                     color: red;
+                };
+                &:hover{
+                    color: red;
                 }
             }
         }
@@ -214,7 +221,7 @@ header{
 #nav_wrap{
     background: #fff;
     position: relative;
-    div{
+    &>div{
         position: absolute;
         width: 100%;
         bottom: -20px;
@@ -226,19 +233,111 @@ header{
 nav{
     height: 36px;
     font-size: 14px;
-    li{
+    position: relative;
+    &>ul>li{
         float: left;
+        position:relative; 
         &:nth-child(1),&:nth-child(2){
-            a{
+            &>a{
                 color: red;
             }
+        };
+        &:nth-child(1){
+            position: relative;
+            &>a span{
+                display:block;
+                position: absolute;
+                right: 5px;
+                top: 15px;
+                width: 12px;
+                height: 6px;
+                background: url(../images/top_bar2.png) no-repeat ;
+                &:nth-child(1){
+                   background-position: -109px -65px; 
+                };
+                &:nth-child(2){
+                   background-position: -116px -75px; 
+                   display: none;
+                };
+            }
+        };
+        &:nth-child(4){   
+            border: 1px solid #fff;       
+            div{
+                display: none;
+                width: 96px;
+                position: absolute;
+                left: -1px;
+                top: 35px;
+                z-index: 2;
+                background: #fff;
+                border: 1px solid orange;
+                border-top: none;
+                a{
+                    display: block;
+                    text-align: center;
+                    height: 37px;
+                    line-height: 37px;
+                    font-size: 12px;
+                    &:hover{
+                        color: red;
+                    }
+                }
+            }
+        }
+        &>a{
+          display: block;
+          height: 36px;
+          line-height: 36px;
+          padding: 0 20px;  
         }
     };
-    a{
-      display: block;
-      height: 36px;
-      line-height: 36px;
-      padding: 0 20px;  
+    .products{
+        ul{
+            position: absolute;
+            z-index: 3;
+            top: 36px;
+            left: 0;
+            display: none;
+            li{
+                width: 122px;
+                height: 34px;
+                border: 1px solid #fff;
+                line-height: 34px;
+                text-indent: 30px;
+                background: #fff;
+                font-size: 14px;
+                span{
+                    display: block;
+                    float: right;
+                    width: 6px;
+                    height: 12px;
+                    margin: 10px 5px 0 0;
+                    background: url(../images/1.png) no-repeat -60px -200px;
+                }
+            };
+            li.products_hover{
+                width: 123px;
+                border: 1px solid orange;
+                border-right-color: #fff;
+            };
+        }    
+        .products_right{
+            position: absolute;
+            left: 124px;
+            top: 36px;
+            background: #fff;
+            z-index: 2;
+            width: 964px;
+            border: 1px solid orange;
+//          display: none;
+            .products_content{
+                float: left;
+                width: 736px;
+                border-right: 1px solid #eee;
+            }
+        }  
+        
     }
 }
 
