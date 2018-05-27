@@ -304,9 +304,8 @@ nav{
                 height: 34px;
                 border: 1px solid #fff;
                 line-height: 34px;
-                text-indent: 30px;
                 background: #fff;
-                font-size: 14px;
+                font-size: 12px;
                 span{
                     display: block;
                     float: right;
@@ -314,7 +313,38 @@ nav{
                     height: 12px;
                     margin: 10px 5px 0 0;
                     background: url(../images/1.png) no-repeat -60px -200px;
-                }
+                };
+                &:hover{
+                    color: red;
+                };
+                b{
+                    display: block;
+                    float: left;
+                    width: 14px;
+                    height: 14px;
+                    margin: 10px 15px 0 10px;
+                    background: url(../images/top_bar2.png) no-repeat;
+                };
+                $products_position:(
+                    (left:-113px,top:0),
+                    (left:-129px,top:0),
+                    (left:-145px,top:0),
+                    (left:-112px,top:-20px),
+                    (left:-129px,top:-20px),
+                    (left:-146px,top:-20px),
+                    (left:-113px,top:-40px),
+                    (left:-131px,top:-40px),
+                    (left:-151px,top:-40px)
+                );
+                @for $i from 1 through length($products_position){
+                    $item: nth($products_position , $i);
+                    &:nth-child(#{$i}){
+                        b{
+                            background-position-x: map-get($item,left);
+                            background-position-y: map-get($item,top);
+                        }
+                    };           
+                }  
             };
             li.products_hover{
                 width: 123px;
@@ -330,11 +360,47 @@ nav{
             z-index: 2;
             width: 964px;
             border: 1px solid orange;
-//          display: none;
+            display: none;
             .products_content{
                 float: left;
-                width: 736px;
+                width: 676px;
+                padding: 7px 30px 0 30px;
                 border-right: 1px solid #eee;
+                font-size: 12px;
+                div{
+                    width: 100%;
+                    h4{
+                        font-weight: 900;
+                        height: 25px;
+                        line-height: 25px;
+                        border-bottom: 1px dashed #ddd;
+                        &:hover{
+                            color: red;
+                        }
+                    };
+                    a{
+                        display: inline-block;
+                        height: 12px;
+                        line-height: 12px;
+                        padding-right:7px ;
+                        margin: 9px 7px 9px 0;
+                        border-right: 1px solid #ddd;
+                        &:last-child{
+                            border: none;
+                        };
+                        &:hover{
+                            color: red;
+                        }
+                    }
+                }    
+            };
+            .products_pic{
+                float: left;
+                width: 210px;
+                img{
+                    float: left;
+                    margin: 10px 2px;
+                }
             }
         }  
         

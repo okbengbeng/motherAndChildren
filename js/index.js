@@ -30,19 +30,46 @@ $(function(){
 
 //nav
 $(function(){
-	//全部分类
+	//弹出全部分类、获取分类信息
 	$("nav>ul>li").eq(0).hover(function(){
-		$(this).find("span").fadeToggle(10);
+		$(".products ul").empty();
+		$(this).find("a").find("span").fadeToggle(10);
 		$(".products").find("ul").fadeToggle(10);
-		
-	})
-	$(".products").find("li").hover(function(){
-		$(this).addClass("products_hover").siblings().removeClass("products_hover");
-	})
-	
-	
-	
-	
+		$.getJSON("http://goods.api.muyingzhijia.com//json/reply/QueryIndexCategorys?callback=?&ParentIds=%5B%7B+%22CategoryId%22%3A+11%7D%2C%7B+%22CategoryId%22%3A+2%7D%2C%7B+%22CategoryId%22%3A+441%7D%2C%7B+%22CategoryId%22%3A+442%7D%2C%7B+%22CategoryId%22%3A+6%7D%2C%7B+%22CategoryId%22%3A+3%7D%2C%7B+%22CategoryId%22%3A+7%7D%2C%7B+%22CategoryId%22%3A+9%7D%2C%7B+%22CategoryId%22%3A+443%7D%5D&_=1527414065696",function(data){
+//			console.log(data.QueryIndexCategorysDtos);
+			for(var i=0;i<data.QueryIndexCategorysDtos.length;i++){
+				var $product=data.QueryIndexCategorysDtos[i].VchCateName;
+				$(".products ul").append("<li><b></b>"+$product+"<span></span></li>");
+			};
+			//弹出右侧详细分类
+			$(".products").find("li").hover(function(){
+				$(".products_content").empty();
+				$(".products_pic").empty();
+				$(this).addClass("products_hover").siblings().removeClass("products_hover");
+				
+				console.log(data.QueryIndexCategorysDtos[$(this).index()]);
+				var $product=data.QueryIndexCategorysDtos[$(this).index()];
+				for(var j=0;j<$product.GetTwoCategory.length;j++){
+					$(".products_content").append("<div><h4>"+$product.GetTwoCategory[j].TwoCatetory.VchCateName+"</h4></div>");
+					for(var k=0;k<$product.GetTwoCategory[j].TwoCatetory.ThreeCategory.length;k++){
+						$(".products_content").find("div").eq(j).append("<a href=''>"+$product.GetTwoCategory[j].TwoCatetory.ThreeCategory[k].VchCateName+"</a>");
+					}	
+				};
+				for(var i=0;i<$product.GetTwoBrand.length;i++){
+					$(".products_pic").append("<img src='"+$product.GetTwoBrand[i].PictureUrl+"' />")
+					
+					
+				}
+			});
+			$(".products").find("ul").hover(function(){
+				console.log("aa");
+				$(".products_right").fadeToggle(1);
+			})
+			
+			
+			
+		})
+	});
 	
 	
 	//直邮弹出框
