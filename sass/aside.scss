@@ -105,13 +105,22 @@ $li-position:(
     }
 }
 //登录框
-.submitBox{
+.submitBox_wrap{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    position: fixed;
+    z-index: 9999;
     display: none;
+}
+
+
+.submitBox{
     background: #fff;
     width: 462px;
     height: 282px;
     border: solid #ddd 8px;
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     right: 0;

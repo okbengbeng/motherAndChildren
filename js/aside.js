@@ -8,14 +8,14 @@ $(function(){
 			$(this).parent().css({"display":"none"}).parent().unbind("hover");
 		})
 		.end().find("p").children().eq(0).click(function(){
-			$(".submitBox").css({"display":"block"})
+			$(".submitBox_wrap").show()
 			.find(".span_gone").click(function(){
-				$(".submitBox").css({"display":"none"});
+				$(".submitBox_wrap").hide();
 			});
 		})	
 	}).mouseleave(function(){
 		$(this).find(".commonAside").fadeOut(10).end()
 		.find(".asid_pic").css({"background-position-x":0})
-	})
+	});
 	
 })

@@ -47,31 +47,33 @@
 			</ul>	
 		</div>
 		<!--登录框-->
-		<div class="submitBox">
-			<h3>你尚未登录<span class="span_gone">X</span></h3>
-			<div class="submitBox_center">
-				<label for="username">账户名
-					<input type="text" name="username" id="username" placeholder="亲输入邮箱或手机号码"/>
-				</label>
-				<label for="password">密　码
-					<input type="password" name="passsword" id="password" placeholder="亲输入密码"/>
-				</label>
-				<label for="freeSub">记住我（30天内免登录）
-					<input type="checkbox" id="freeSub"/>
-				</label>
-				<div >
-					<input type="button" name="btn1" id="btn1" value="立即登录" />
-					<input type="button" name="btn2" id="btn2" value="立即注册" />	
+		<div class="submitBox_wrap">
+			<div class="submitBox">
+				<h3>你尚未登录<span class="span_gone">X</span></h3>
+				<div class="submitBox_center">
+					<label for="username">账户名
+						<input type="text" name="username" id="username" placeholder="亲输入邮箱或手机号码"/>
+					</label>
+					<label for="password">密　码
+						<input type="password" name="passsword" id="password" placeholder="亲输入密码"/>
+					</label>
+					<label for="freeSub">记住我（30天内免登录）
+						<input type="checkbox" id="freeSub"/>
+					</label>
+					<div >
+						<input type="button" name="btn1" id="btn1" value="立即登录" />
+						<input type="button" name="btn2" id="btn2" value="立即注册" />	
+					</div>
+					
 				</div>
-				
+				<div class="submitBox_bottom">
+					<p>使用其它方式登录：</p>
+					<p><span></span> 新浪微博</p>
+					<p><span></span> 支付宝</p>
+					<p><span></span> QQ</p>
+				</div>
 			</div>
-			<div class="submitBox_bottom">
-				<p>使用其它方式登录：</p>
-				<p><span></span> 新浪微博</p>
-				<p><span></span> 支付宝</p>
-				<p><span></span> QQ</p>
-			</div>
-		</div>
+		</div>	
 		<!--顶部导航栏-->
 		<div id="top_wrap">
 			<div id="top_nav">
@@ -161,17 +163,22 @@
 						<!--弹出菜单-->
 						<div class="products">
 							<ul>
+								<li><b></b>妈妈专区<span></span></li>
+								<li><b></b>哺乳喂养<span></span></li>
+								<li><b></b>奶粉辅食<span></span></li>
+								<li><b></b>纸尿裤湿巾<span></span></li>
+								<li><b></b>洗护用品<span></span></li>
+								<li><b></b>宝宝服饰<span></span></li>
+								<li><b></b>童车座椅<span></span></li>
+								<li><b></b>玩具<span></span></li>
+								<li><b></b>床椅寝具<span></span></li>
 							</ul>
 							<div class="products_right">
 								<div class="products_content">
-									<!--
-										<h4>孕妇内衣</h4>
-										<div>
+									<div>
+										<h4>孕妇内衣</h4>															
 										<a href="">吸奶器</a>
-										<a href="">吸奶啊器</a>
-										<a href="">吸啊奶器</a>
-										<a href="">吸啊啊奶器</a>
-									</div>	-->
+									</div>	
 								</div>
 								<div class="products_pic">
 								</div>
@@ -372,5 +379,5 @@
 	</body>
 	<script src="js/aside.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/carousel.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/base.js" type="text/javascript" charset="utf-8"></script>
 </html>

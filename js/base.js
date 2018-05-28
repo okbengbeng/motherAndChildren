@@ -19,7 +19,17 @@ $(function(){
 		.end().find(".triangle").find("b").eq(0).fadeIn(3)
 		.end().eq(1).fadeOut(3);
 		$(this).find("a").has("div").css({"border":"1px solid #eee","background":"none"});	
-	})
+	}).find("span").eq(0).click(function(){
+		$(".submitBox_wrap").show()
+			.find(".span_gone").click(function(){
+				$(".submitBox_wrap").hide();
+			});
+	}).end().eq(1).click(function(){
+		window.location.href="html/login.html";
+	});
+	
+	
+	
 })
 
 
@@ -32,15 +42,9 @@ $(function(){
 $(function(){
 	//弹出全部分类、获取分类信息
 	$("nav>ul>li").eq(0).hover(function(){
-		$(".products ul").empty();
 		$(this).find("a").find("span").fadeToggle(10);
 		$(".products").find("ul").fadeToggle(10);
 		$.getJSON("http://goods.api.muyingzhijia.com//json/reply/QueryIndexCategorys?callback=?&ParentIds=%5B%7B+%22CategoryId%22%3A+11%7D%2C%7B+%22CategoryId%22%3A+2%7D%2C%7B+%22CategoryId%22%3A+441%7D%2C%7B+%22CategoryId%22%3A+442%7D%2C%7B+%22CategoryId%22%3A+6%7D%2C%7B+%22CategoryId%22%3A+3%7D%2C%7B+%22CategoryId%22%3A+7%7D%2C%7B+%22CategoryId%22%3A+9%7D%2C%7B+%22CategoryId%22%3A+443%7D%5D&_=1527414065696",function(data){
-//			console.log(data.QueryIndexCategorysDtos);
-			for(var i=0;i<data.QueryIndexCategorysDtos.length;i++){
-				var $product=data.QueryIndexCategorysDtos[i].VchCateName;
-				$(".products ul").append("<li><b></b>"+$product+"<span></span></li>");
-			};
 			//弹出右侧详细分类
 			$(".products").find("li").hover(function(){
 				$(".products_content").empty();
@@ -61,13 +65,11 @@ $(function(){
 					
 				}
 			});
-			$(".products").find("ul").hover(function(){
-				console.log("aa");
-				$(".products_right").fadeToggle(1);
+			$(".products").find("ul").mouseover(function(){
+				$(".products_right").show();
+			}).mouseout(function(){
+				$(".products_right").hide();
 			})
-			
-			
-			
 		})
 	});
 	
