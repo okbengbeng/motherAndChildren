@@ -1,11 +1,11 @@
 $img : "../images/righticon.png";
 $li-position:(
-    (height:31px,top:20px,span-top:0),
-    (height:100px,top:140px,span-top:-25px),
-    (height:31px,top:250px,span-top:-50px),
-    (height:31px,top:320px,span-top:-75px),
-    (height:125px,top:400px,span-top:-100px),
-    (height:65px,top:530px,span-top:-125px),
+    (height:31px,bottom:90%,span-top:0),
+    (height:100px,bottom:60%,span-top:-25px),
+    (height:31px,bottom:53%,span-top:-50px),
+    (height:31px,bottom:43%,span-top:-75px),
+    (height:125px,bottom:10%,span-top:-100px),
+    (height:65px,bottom:0,span-top:-125px),
 );
 #aside{
     position: fixed;
@@ -23,6 +23,7 @@ $li-position:(
         position: absolute;
 //      text-align:center; 
         font-size:14px; 
+        background: white;
         &:hover{
           background-color: red;
         };
@@ -41,16 +42,23 @@ $li-position:(
             $item: nth($li-position , $i);
             &:nth-child(#{$i}){
                 height: map-get($item,height);
-                top: map-get($item,top);
+                bottom: map-get($item,bottom);
                 .asid_pic{
                     background-position-y: map-get($item,span-top);
                 }
             };           
         }  
+        &li:last-child{
+            bottom: 0;
+        }
+        
+        
+        
     }
     //弹出框
     .aside_top{
         position: absolute;
+        box-shadow: 0px 0px  1px 1px #ddd;
         display: none;
         width: 290px;
         height: 160px;
@@ -91,6 +99,7 @@ $li-position:(
         }
     }
     .aside_center,.aside_bottom{
+        box-shadow: 0px 0px  1px 1px #ddd;
         position: absolute;
         display: none;
         width: 78px;
@@ -236,4 +245,49 @@ $li-position:(
         }
     }
 }
+
+
+//左侧边栏
+#leftAside{
+    width: 125px;
+    height: 550px;
+    position: fixed;
+    z-index: 5;
+    left: 10px;
+    bottom: 60px;
+    .leftAside_top{
+        height: 176px;
+        padding-top: 54px;
+        background: url(../images/leftFixImg.png) no-repeat left top;
+        div{
+            height: 36px;
+        }
+       
+    }
+    
+    .leftAside_bottom{
+        img{
+            width: 125px;
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

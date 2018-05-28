@@ -16,6 +16,24 @@ $(function(){
 	}).mouseleave(function(){
 		$(this).find(".commonAside").fadeOut(10).end()
 		.find(".asid_pic").css({"background-position-x":0})
+	}).eq(5).click(function(){
+		$("body,html").stop().animate({"scrollTop":0});
+		
+		
 	});
+	
+	$("#aside").height($(window).height());
+	$(window).resize(function(){
+		$("#aside").height($(window).height());
+	});
+//	$(window).scroll(function(){
+//		console.log($(window).scrollTop())
+//		if($(window).scrollTop()>200){
+//			$("#aside").show();
+//		}else{
+//			$("#aside").hide();
+//		}
+//	})
+	
 	
 })

@@ -26,7 +26,7 @@
 					</label>
 					<div >
 						<input type="button" name="btn1" id="btn1" value="立即登录" />
-						<input type="button" name="btn2" id="btn2" value="立即注册" />	
+						<a href="login.html">立即注册</a>	
 					</div>
 					
 				</div>
@@ -54,8 +54,8 @@
 				<ul class="top_right">
 					<li>
 						欢迎来到母婴之家！
-						<a>[登录]</a>
-						<a>[免费注册]</a>
+						<span>[登录]</span>
+						<a href="login.html">[免费注册]</a>
 					</li>
 					<li>
 						<a href="">我的订单
@@ -115,18 +115,17 @@
 				<div class="login_left1">
 					<label for="phoneNum">
 						<div>手机号：</div>
-						<div>
+						<div class="inputtxt">
 							<input type="text" name="phoneNum" id="phoneNum" placeholder="请填入手机号" />
 							<span></span>
 						</div>
 						<div class="warming"> 
-							<span></span>
-							手机格式不对，请重新输入！
+							<span></span>手机格式不对，请重新输入！
 						</div>	
 					</label>
 					<label for="password1">
 						<div>请设置密码：</div>
-						<div>
+						<div class="inputtxt">
 							<input type="text" name="password1" id="password1" placeholder="请填入密码" />
 							<span></span>
 						</div>
@@ -137,14 +136,10 @@
 					</label>
 					<label for="password2">
 						<div>请确认密码：</div>
-						<div>
+						<div class="inputtxt">
 							<input type="text" name="password2" id="password2" placeholder="请再次填写密码" />
 							<span></span>
 						</div>
-						<div class="warming">
-							<span></span>
-							重复密码不能为空，请确认
-						</div>	
 						<div class="warming">
 							<span></span>
 							2次密码不一致，请重新输入
@@ -161,16 +156,16 @@
 					<label for="massage">
 						<div>短信验证码：</div>
 						<input type="text" name="massage" id="massage" />
-						<div class="warming">短信验证码格式错误</div>
-						<div></div>
+						<div class="getmassage"></div>
+						<div class="warming"><span></span>短信验证码格式错误</div>
+						
 					</label>
 					<label for="userAgree">
 						<div></div>
 						<input type="checkbox" name="userAgree" id="userAgree" />
-						<div>
+						<div class="readAgree">
 							阅读并同意
 							<a href="">"母婴之家网站用户协议"</a>
-							<span></span>
 						</div>
 						<div class="warming">
 							<span></span>
@@ -179,18 +174,14 @@
 					</label>
 					<label>
 						<div></div>
-						<input type="button" name="btnl" id="btnl" value="提交注册" />
+						<input type="button" name="btnl" id="btnl" />
 					</label>
 					<label>
 						<div></div>
 						<div>
 							<p>使用合作网站账号登录母婴之家：</p>
 						</div>
-						<div>
-							<a href=""></a>
-							<a href=""></a>
-							<a href=""></a>
-						</div>
+						<div></div>
 					</label>
 				</div>
 				<div class="login_right1">
