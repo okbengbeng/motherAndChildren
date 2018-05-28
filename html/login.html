@@ -17,9 +17,11 @@
 				<div class="submitBox_center">
 					<label for="username">账户名
 						<input type="text" name="username" id="username" placeholder="亲输入邮箱或手机号码"/>
+						<span>*请输入正确手机号</span>
 					</label>
 					<label for="password">密　码
-						<input type="password" name="passsword" id="password" placeholder="亲输入密码"/>
+						<input type="text" name="passsword" id="password" placeholder="亲输入密码"/>
+						<span>*密码不正确</span>
 					</label>
 					<label for="freeSub">记住我（30天内免登录）
 						<input type="checkbox" id="freeSub"/>
@@ -53,9 +55,11 @@
 				</ul>
 				<ul class="top_right">
 					<li>
+						<p></p>
 						欢迎来到母婴之家！
 						<span>[登录]</span>
 						<a href="login.html">[免费注册]</a>
+						<a href="login.html" style="display: none;">[退出]</a>
 					</li>
 					<li>
 						<a href="">我的订单
@@ -112,6 +116,8 @@
 				</div>
 			</div>
 			<div class="login_bottom">
+				<div class="reg_sucess"></div>
+				<div class="reg_default">*用户名已存在</div>
 				<div class="login_left1">
 					<label for="phoneNum">
 						<div>手机号：</div>
@@ -214,4 +220,5 @@
 	</body>
 	<script src="../js/base.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../js/login.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/submit.js" type="text/javascript" charset="utf-8"></script>
 </html>

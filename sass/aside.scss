@@ -158,31 +158,57 @@ $li-position:(
             float: right;
         }
     }
+    .sub_default1{
+        position: absolute;
+        left: 330px;
+        top: 65px;
+        color: red;
+        display: none;
+    }
+    .sub_default2{
+        position: absolute;
+        color: red;
+        left: 330px;
+        top: 110px;
+        display: none;
+    }
     .submitBox_center{
-        margin: 20px 15px 0 15px;
+        margin: 20px 0px 0 15px;
         border-bottom: 2px solid #ddd;
         label{
-            width: 300px;
+            width: 440px;
             height: 30px;
             position: relative;
             display: block;
             margin-bottom: 15px;
-            text-indent: 40px;
+            text-indent: 15px;
             line-height: 30px;
             input{
                 position: absolute;
-                left: 100px;
+                left: 70px;
                 
             }
+            
             &:nth-of-type(1),&:nth-of-type(2){
                 input{
                     width: 227px;
                     height: 28px;
                     border: 1px solid #ddd;
                 }
+                span{
+                    float: right;
+                    color: red;
+                    display: none;
+                    margin-right: 5px;
+                }
+            }
+            &:nth-of-type(2){
+                span{
+                    margin-right: 47px;
+                }
             }
             &:nth-of-type(3){
-                text-indent: 120px;
+                text-indent: 100px;
                 input{
                     top: 8px;
                 }
@@ -194,7 +220,7 @@ $li-position:(
             background: orange;
             border: none;
             border-radius: 5px;
-            margin: 0 10px 15px 100px;
+            margin: 0 10px 15px 70px;
         }
         #btn2{
             width: 80px;
@@ -252,6 +278,7 @@ $li-position:(
     width: 125px;
     height: 550px;
     position: fixed;
+    display: none;
     z-index: 5;
     left: 10px;
     bottom: 60px;

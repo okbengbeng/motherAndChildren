@@ -21,19 +21,29 @@ $(function(){
 		
 		
 	});
-	
+	//aside高度自动变化
 	$("#aside").height($(window).height());
 	$(window).resize(function(){
 		$("#aside").height($(window).height());
 	});
-//	$(window).scroll(function(){
-//		console.log($(window).scrollTop())
-//		if($(window).scrollTop()>200){
-//			$("#aside").show();
-//		}else{
-//			$("#aside").hide();
-//		}
-//	})
+	//弹出左侧边栏
+	$(window).scroll(function(){
+		if($(window).scrollTop()>100){
+			$("#leftAside").show();
+		}else{
+			$("#leftAside").hide();
+		}
+	})
+	//点击到达指定楼层
+	$(".leftAside_top").children().eq(0).click(function(){
+		var $scrollTop=$("#main_center").offset().top
+		$("body,html").stop().animate({"scrollTop":$scrollTop});
+	})
+	$(".leftAside_top").children().eq(1).click(function(){
+		var $scrollTop=$("#main_center2").offset().top
+		$("body,html").stop().animate({"scrollTop":$scrollTop});
+	})
+	
 	
 	
 })

@@ -1,4 +1,4 @@
-#banner,#main_top,#main_center,#main_bottom{
+#banner,#main_top,#main_center,,#main_center2,#main_bottom{
     width: 1090px;
     margin: 0 auto;
 }
@@ -91,7 +91,7 @@ $banner_width:1090px;
         text-align: center;
     }
 }
-#main_center{
+#main_center,#main_center2{
     .content{
         height: 298px;
         border-radius: 10px;

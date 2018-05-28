@@ -58,14 +58,19 @@
 		</div>
 		<!--登录框-->
 		<div class="submitBox_wrap">
+			
 			<div class="submitBox">
+				<div class="sub_default1">*用户不存在</div>
+				<div class="sub_default2">*密码错误</div>
 				<h3>你尚未登录<span class="span_gone">X</span></h3>
 				<div class="submitBox_center">
 					<label for="username">账户名
-						<input type="text" name="username" id="username" placeholder="亲输入邮箱或手机号码"/>
+						<input type="text" name="username" id="username" placeholder="亲输入手机号码"/>
+						<span>*请输入正确手机号</span>
 					</label>
 					<label for="password">密　码
-						<input type="password" name="passsword" id="password" placeholder="亲输入密码"/>
+						<input type="text" name="passsword" id="password" placeholder="亲输入密码"/>
+						<span>*密码不正确</span>
 					</label>
 					<label for="freeSub">记住我（30天内免登录）
 						<input type="checkbox" id="freeSub"/>
@@ -98,10 +103,13 @@
 					</li>
 				</ul>
 				<ul class="top_right">
+
 					<li>
+						<p></p>
 						欢迎来到母婴之家！
 						<span>[登录]</span>
-						<span>[免费注册]</span>
+						<a href="html/login.html">[免费注册]</a>
+						<a href="index.html">[退出]</a>
 					</li>
 					<li>
 						<a href="">我的订单
@@ -260,10 +268,29 @@
 						</div>
 					</div>
 				</div>
-				
-				
 			</section>
-			
+		</div>
+		<div id="main_center2">
+			<div class="title">
+				<div class="title_line"></div>
+				<h3>今日<span>精选</span></h3>
+				<p>Special deals</p>
+			</div>
+			<section>
+				<div class="content">
+					<div class="section_left">
+						<img src="images/20171127142202_10_1182.jpg"/>
+					</div>
+					<div class="section_right">
+						<h3>NUK88减5/158减10/299减20</h3>
+						<p>NUK靓丽印花玻璃材质奶瓶宝宝妈妈都喜爱</p>
+						<div>
+							<div>￥89<span>起</span></div>
+							<a href="">点击进入</a>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
 		<!--main_bottom-->
 		<div id="main_bottom">
@@ -390,4 +417,5 @@
 	<script src="js/aside.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/carousel.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/base.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/submit.js" type="text/javascript" charset="utf-8"></script>
 </html>

@@ -6,6 +6,7 @@
     background: #fff;
 }
 
+//logo
 #logo_wrap1{
     background: #fff;
     padding-top: 20px;
@@ -20,7 +21,7 @@
         float: left;
     }
 }
-
+//main
 #login{
     height: 570px;
     padding: 17px;
@@ -67,6 +68,29 @@
         padding: 40px 10px 10px ;
         margin: 0 auto;
         background: #fff;
+        position: relative;
+        .reg_sucess{
+            position: absolute;
+            width: 227px;
+            height: 37px;
+            left: 160px;
+            top:40px;
+            z-index: 3;
+            background: url(../images/register.png) 0 -70px;
+            display: none;
+        }
+        .reg_default{
+            position: absolute;
+            width: 100px;
+            height: 20px;
+            line-height: 20px;
+            left: 420px;
+            top:48px;
+            color: red;
+            font-size: 12px;
+            display: none;
+        }
+        
         .login_left1{
             float: left;
             width: 568px;
@@ -152,7 +176,7 @@
                     &:nth-child(1){
                         float: left;
                         width: 150px;
-                        height: 35px;
+                        height: 34px;
                         line-height: 35px;
                         text-align: right;
                         margin-right: 5px;
@@ -199,19 +223,11 @@
                         margin: 0 3px;
                     }
                 }
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            } 
         }
         .login_right1{
-            float: left;
+            float: right;
+            margin-right: 70px;
         }
         
         
