@@ -78,19 +78,7 @@ $(function(){
 						}
 				
 			});
-			
-			
-			
-			
-			
-			
-			
-			
-			
 		}
-		
-		
-		
 	})
 	//登录
 	$(".login_top").find("div").eq(1).click(function(){
@@ -100,7 +88,6 @@ $(function(){
 			$(".submitBox_wrap").hide();
 		});	
 	})
-	
 })
 
 

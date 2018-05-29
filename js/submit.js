@@ -26,6 +26,7 @@ $(function(){
 			$flag2=true;
 		}
 	});
+	//登录
 	$("#btn1").click(function(){
 		$flag=$flag1+$flag2;
 		if($flag==2){
@@ -36,17 +37,21 @@ $(function(){
 				url:"http://h6.duchengjiu.top/shop/api_user.php",
 				data:"status=login&username="+$username+"&password="+$password,
 				success:function(data){
-							console.log(data);
 							if(data.code==0){
 								$(".top_right li").eq(0).find("p").html($username+"　,")
 								.end().find("span").hide().end().find("a").eq(0).hide()
 								.end().eq(1).show();
-								
+								$(".submitBox_wrap").hide();
+								$("#aside .user").eq(0).find("p").find("span").eq(0).html($username+",欢迎来到母婴之家！").next().hide().next().hide().next().show();
+								$("#aside .user").eq(1).find("p").find("span").eq(0).html($username+",欢迎来到母婴之家！").next().hide().next().hide().next().show();
 								//把用户名和密码写入cookie
-//								$.cookie('m_username',$username, {expires:7,path:'/'});
-//								$.cookie('m_password',$password, {expires:7,path:'/'});
-					
-								
+								if($("#freeSub").prop("checked")==true){
+									$.cookie('m_username',$username, {expires:7,path:'/'});
+									$.cookie('m_password',$password, {expires:7,path:'/'});
+								}else{								
+									$.cookie('m_username',null);
+									$.cookie('m_password',null);
+								}
 							}else if(data.code==1001){
 								$(".sub_default2").show();
 							}else if(data.code==2002){
@@ -54,15 +59,45 @@ $(function(){
 							}
 						}
 			})
-			
-			
-			
-			
-			
 		};
 	})
 	
 	
+	
+	
+	
+	
+	
+	//退出清理cookie
+	$(".logout").click(function(){
+//		$.cookie('m_username',null);
+//		$.cookie('m_password',null);
+		var oDate = new Date();
+		oDate.setDate(oDate.getDate()-1);
+		document.cookie = "m_username=aaaaa;expires="+oDate+";path=/";
+		document.cookie = "m_password=aaaaa;expires="+oDate+";path=/";
+	})
+	//免登陆
+	var $m_username=$.cookie("m_username");
+	var $m_password=$.cookie("m_password");
+	console.log($m_username,$m_password)
+	if($m_username!=null&&$m_password!=null){
+		$.ajax({
+			type:"post",
+			url:"http://h6.duchengjiu.top/shop/api_user.php",
+			data:"status=login&username="+$m_username+"&password="+$m_password,
+			success:function(data){
+				if(data.code==0){
+								$(".top_right li").eq(0).find("p").html($m_username+"　,")
+								.end().find("span").hide().end().find("a").eq(0).hide()
+								.end().eq(1).show();
+								$(".submitBox_wrap").hide();
+								$("#aside .user").eq(0).find("p").find("span").eq(0).html($m_username+",欢迎来到母婴之家！").next().hide().next().hide().next().show();
+								$("#aside .user").eq(1).find("p").find("span").eq(0).html($m_username+",欢迎来到母婴之家！").next().hide().next().hide().next().show();					
+				}
+			}
+		});
+	}
 	
 	
 })

@@ -7,7 +7,7 @@ $(function(){
 		.find(".span_gone").click(function(){
 			$(this).parent().css({"display":"none"}).parent().unbind("hover");
 		})
-		.end().find("p").children().eq(0).click(function(){
+		.end().find("p").children().eq(1).click(function(){
 			$(".submitBox_wrap").show()
 			.find(".span_gone").click(function(){
 				$(".submitBox_wrap").hide();
