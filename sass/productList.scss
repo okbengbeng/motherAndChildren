@@ -1,0 +1,164 @@
+#top_nav,header{
+    width: 1000px;
+}
+
+header{
+    .header_right{
+        margin-left: 50px;
+    }
+    .shopping{
+        width: 156px;
+        height: 42px;
+        line-height: 42px;
+        text-align: center;
+        font-size: 14px;
+        background: orangered;
+        border-radius: 5px;
+        color: #fff;
+        margin-left: 80px;
+        position: relative;
+        span{
+            position: absolute;
+            display: block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            &:nth-of-type(1){
+                background: url(../images/1.png) 0 -26px;  
+                left: 14px;
+                top: 5px;
+                
+            }
+            &:nth-of-type(2){
+                right: 17px;
+                top: 7px;
+            }
+        }
+        
+    }
+}
+
+//main_productList
+#main_productList{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+    aside{
+        width: 198px;
+        .aside_up{
+            border: 1px solid #ddd;
+            background: #fff;
+            margin-bottom: 20px;
+            &>h4{
+                color: orangered;
+                font-weight: 900;
+                height: 29px;
+                font-size: 14px;
+                text-indent: 15px;
+                line-height: 28px;
+                border-bottom: 1px solid #ddd;
+                background: #F5F5F5;    
+            }
+            &>ul{
+                padding: 0 15px;
+                font-size: 14px;
+                p{
+                    span{
+                        display: block;
+                        float: left;
+                        width: 6px;
+                        height: 9px;
+                        background: url(../images/select_arrow.gif);
+                        margin: 5px;
+                    }
+                }
+                &>li>ul{
+                    margin-left: 25px;
+                    ul{
+                        margin-left: 25px;
+                    }
+                }
+                ul{
+                    display: none;
+                }
+            } 
+        }
+        .aside_down{
+            border: 1px solid #ddd;
+            background: #fff;
+            font-size: 12px;
+            h3{
+                height: 29px;
+                text-indent: 15px;
+                line-height: 28px;
+                font-size: 14px;
+                border-bottom: 1px solid #ddd;
+                background: #F5F5F5; 
+            }
+            .rank_list{
+                padding: 10px;
+                overflow: hidden;
+                .rank_left{
+                    float: left;
+                    width: 14px;
+                    height: 14px;
+                    background: orange;
+                    color: #fff;
+                    font-size: 12px;
+                    text-align: center;
+                    line-height: 14px;
+                    border-radius:3px;
+                    font-weight: 900;
+                }
+                .rank_right{
+                    width: 160px;
+                    float: left;
+                    margin-left: 2px;
+                    &>div{
+                        display: none;
+                        overflow: hidden;
+                        &>a{
+                            float: left;
+                        }
+                        &>div{
+                            padding: 5px;
+                            width: 89px;
+                            float: left;
+                            a{
+                                display: block;
+                                margin-bottom: 5px;
+                            }
+                            div{
+                                color: red;
+                            }
+                        }
+                    }
+                }
+                
+                
+            }
+            
+        }
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+

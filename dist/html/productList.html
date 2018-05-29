@@ -7,6 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/aside.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/productList.css"/>
 		<script src="../js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body style="background: #eee;">
@@ -45,16 +46,6 @@
 					</div>
 				</li>
 			</ul>	
-		</div>
-		<!--左侧边栏-->
-		<div id="leftAside">
-			<div class="leftAside_top">
-				<div></div>
-				<div></div>
-			</div>
-			<div class="leftAside_bottom">
-				<img src="../images/20180504173700_6_20180503185557_6_gouwujintemp.png"/>
-			</div>	
 		</div>
 		<!--登录框-->
 		<div class="submitBox_wrap">
@@ -147,22 +138,8 @@
 		<div id="header_wrap">
 			<header>
 				<div class="logo">
-					<a href="index.html"><img src="../images/logo29new.png"/></a>
+					<a href="../index.html"><img src="../images/logo29new.png"/></a>
 				</div>
-				<ul>
-					<li>
-						<div></div>
-						<p>全球精选正品</p>
-					</li>
-					<li>
-						<div></div>
-						<p>白领妈妈推荐</p>
-					</li>
-					<li>
-						<div></div>
-						<p>专注母婴13年</p>
-					</li>
-				</ul>
 				<div class="header_right">
 					<div>
 						<input type="text" name="header_text" id="header_text" placeholder="搜索 母婴之家 商品/品牌" />
@@ -170,6 +147,11 @@
 					</div>
 					<p>热门搜索：<a>爱他美</a><a>美德乐</a><a>口罩</a><a>保温杯</a><a>澳洲直邮</a><a>睡袋</a><a>暖奶器</a><a>奶瓶</a></p>
 				</div>
+				<div class="shopping">
+					<span></span>
+					购物车
+					<span>0</span>
+				</div>	
 			</header>	
 		</div>
 		<!--nav-->
@@ -215,21 +197,242 @@
 					<li><a href="">会员俱乐部</a></li>
 				</ul>
 			</nav>
-			<div></div>
 		</div>
 		<!--main_productList-->
 		<div id="main_productList">
-			<div>
+			<aside>
+				<div class="aside_up">
+					<h4>搜索分类选择</h4>
+					<ul>
+						<li>
+							<p><span></span>奶粉辅食</p>
+							<ul>
+								<li>
+									<p><span></span>特配奶粉</p>
+									<ul>
+										<li>特殊配方奶粉</li>
+									</ul>
+								</li>
+								<li>
+									<p><span></span>跨境海淘</p>
+									<ul>
+										<li>荷兰牛栏</li>
+									</ul>
+								</li>
+								<li>
+									<p><span></span>授权行货</p>
+									<ul>
+										<li>惠氏</li>
+									</ul>
+								</li>
+								<li>
+									<p><span></span>辅食</p>
+									<ul>
+										<li>米粉</li>
+									</ul>
+								</li>
+								<li>
+									<p><span></span>营养食品</p>
+									<ul>
+										<li>益生菌</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p><span></span>哺育喂养</p>
+							<ul>
+								<li>
+									<p><span></span>特配奶粉</p>
+									<ul>
+										<li>特殊配方奶粉</li>
+									</ul>
+								</li>
+								<li>
+									<p><span></span>跨境海淘</p>
+									<ul>
+										<li>荷兰牛栏</li>
+									</ul>
+								</li>
+								<li>
+									<p><span></span>授权行货</p>
+									<ul>
+										<li>惠氏</li>
+									</ul>
+								</li>
+								<li>
+									<p><span></span>辅食</p>
+									<ul>
+										<li>米粉</li>
+									</ul>
+								</li>
+								<li>
+									<p><span></span>营养食品</p>
+									<ul>
+										<li>益生菌</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p><span></span>妈妈专区</p>
+							<ul>
+								<li>
+									<p><span></span>特配奶粉</p>
+									<ul>
+										<li>特殊配方奶粉</li>
+									</ul>
+								</li>
+								<li>
+									<p><span></span>跨境海淘</p>
+									<ul>
+										<li>荷兰牛栏</li>
+									</ul>
+								</li>
+								<li>
+									<p><span></span>授权行货</p>
+									<ul>
+										<li>惠氏</li>
+									</ul>
+								</li>
+								<li>
+									<p><span></span>辅食</p>
+									<ul>
+										<li>米粉</li>
+									</ul>
+								</li>
+								<li>
+									<p><span></span>营养食品</p>
+									<ul>
+										<li>益生菌</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p><span></span>洗护用品</p>
+							<ul>
+								<li>
+									<p><span></span>特配奶粉</p>
+									<ul>
+										<li>特殊配方奶粉</li>
+									</ul>
+								</li>
+								<li>
+									<p><span></span>跨境海淘</p>
+									<ul>
+										<li>荷兰牛栏</li>
+									</ul>
+								</li>
+								<li>
+									<p><span></span>授权行货</p>
+									<ul>
+										<li>惠氏</li>
+									</ul>
+								</li>
+								<li>
+									<p><span></span>辅食</p>
+									<ul>
+										<li>米粉</li>
+									</ul>
+								</li>
+								<li>
+									<p><span></span>营养食品</p>
+									<ul>
+										<li>益生菌</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="aside_down">
+					<h3>每周热销商品排行</h3>
+					<div class="rank_list">
+						<div class="rank_left">1</div>
+						<div class="rank_right">
+							<a href="">贝亲食物研磨器（新款8件...</a>
+							<div>
+								<a href=""><img src="../images/6602_01_01.jpg"/></a>
+								<div>
+									<a href="">贝亲食物研磨器...</a>
+									<div>￥82.60</div>
+								</div>
+							</div>
+						</div>						
+					</div><div class="rank_list">
+						<div class="rank_left">2</div>
+						<div class="rank_right">
+							<a href="">贝亲食物研磨器（新款8件...</a>
+							<div>
+								<a href=""><img src="../images/6602_01_01.jpg"/></a>
+								<div>
+									<a href="">贝亲食物研磨器...</a>
+									<div>￥82.60</div>
+								</div>
+							</div>
+						</div>						
+					</div>
+					<div class="rank_list">
+						<div class="rank_left">3</div>
+						<div class="rank_right">
+							<a href="">贝亲食物研磨器（新款8件...</a>
+							<div>
+								<a href=""><img src="../images/6602_01_01.jpg"/></a>
+								<div>
+									<a href="">贝亲食物研磨器...</a>
+									<div>￥82.60</div>
+								</div>
+							</div>
+						</div>						
+					</div>
+					<div class="rank_list">
+						<div class="rank_left">4</div>
+						<div class="rank_right">
+							<a href="">贝亲食物研磨器（新款8件...</a>
+							<div>
+								<a href=""><img src="../images/6602_01_01.jpg"/></a>
+								<div>
+									<a href="">贝亲食物研磨器...</a>
+									<div>￥82.60</div>
+								</div>
+							</div>
+						</div>						
+					</div>
+					<div class="rank_list">
+						<div class="rank_left">5</div>
+						<div class="rank_right">
+							<a href="">贝亲食物研磨器（新款8件...</a>
+							<div>
+								<a href=""><img src="../images/6602_01_01.jpg"/></a>
+								<div>
+									<a href="">贝亲食物研磨器...</a>
+									<div>￥82.60</div>
+								</div>
+							</div>
+						</div>						
+					</div>
+					<div class="rank_list">
+						<div class="rank_left">6</div>
+						<div class="rank_right">
+							<a href="">贝亲食物研磨器（新款8件...</a>
+							<div>
+								<a href=""><img src="../images/6602_01_01.jpg"/></a>
+								<div>
+									<a href="">贝亲食物研磨器...</a>
+									<div>￥82.60</div>
+								</div>
+							</div>
+						</div>						
+					</div>
+				</div>				
+			</aside>
+			<section>
 				
 				
 				
-			</div>
+			</section>
 			
-			<div>
-				
-				
-				
-			</div>
 		</div>
 
 
@@ -326,4 +529,5 @@
 	<script src="../js/carousel.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../js/base.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../js/submit.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/productList.js" type="text/javascript" charset="utf-8"></script>
 </html>

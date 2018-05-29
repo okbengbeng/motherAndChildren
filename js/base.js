@@ -51,7 +51,7 @@ $(function(){
 				$(".products_pic").empty();
 				$(this).addClass("products_hover").siblings().removeClass("products_hover");
 				
-				console.log(data.QueryIndexCategorysDtos[$(this).index()]);
+
 				var $product=data.QueryIndexCategorysDtos[$(this).index()];
 				for(var j=0;j<$product.GetTwoCategory.length;j++){
 					$(".products_content").append("<div><h4>"+$product.GetTwoCategory[j].TwoCatetory.VchCateName+"</h4></div>");
@@ -65,7 +65,7 @@ $(function(){
 					
 				}
 			});
-			$(".products").find("ul").mouseover(function(){
+			$(".products").mouseover(function(){
 				$(".products_right").show();
 			}).mouseout(function(){
 				$(".products_right").hide();

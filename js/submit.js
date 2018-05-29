@@ -80,7 +80,6 @@ $(function(){
 	//免登陆
 	var $m_username=$.cookie("m_username");
 	var $m_password=$.cookie("m_password");
-	console.log($m_username,$m_password)
 	if($m_username!=null&&$m_password!=null){
 		$.ajax({
 			type:"post",
