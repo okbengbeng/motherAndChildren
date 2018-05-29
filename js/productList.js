@@ -11,18 +11,55 @@ $(function(){
 		$(this).siblings().find(".rank_right").children("a").show().next().hide();
 	})
 	
-//	$.ajax({
-//		type:"post",
-//		url:"http://h6.duchengjiu.top/shop/api_goods.php",
-//		data:"search_text=连衣裙&page=1&pagesize=10",
-//		success:function(data){
-//			console.log(data);
-//		}
-//	});
-	$.getJSON("http://buy.api.muyingzhijia.com/json/reply/QueryPromPriceByProdId?a=0.2230388270219119&callback=?&ProductIdList=634198%2C634197%2C634174%2C634201%2C634200%2C634175%2C634173%2C634199%2C634202%2C640038%2C200462%2C629636%2C614084%2C614085%2C103764%2C155507%2C90595%2C155509%2C564639%2C564640%2C564642%2C564638%2C155510%2C155508%2C155511&UserId=0&Guid=string&DisplayLabel=1&SourceTypeSysNo=1&AreaSysNo=100&ChannelID=102&Ckid=21&ExtensionSysNo=&_=1527587419878&__=0.6771638931484314",function(data){
-		console.log(data)
+	//获取商品列表
+	turnNext(1);
+	
+	//翻页
+	var $pageNum=1;
+	$(".turn_page").find("a").click(function(){
+		$pageNum=$(this).index()+1;
+		turnNext($pageNum);
+		
+	});
+	$(".pageDown").click(function(){
+		$pageNum++;
+		if($pageNum>=10){
+			$pageNum=10;
+		};
+		turnNext($pageNum);
+	});
+	$(".pageUp").click(function(){
+		$pageNum--;
+		if($pageNum<=1){
+			$pageNum=1;
+		};
+		turnNext($pageNum);
 	})
 	
+	
+	
+	//获取商品列表封装
+	function turnNext($page){
+		$(".rank_content").empty();
+		$.ajax({
+			type:"get",
+			url:"http://h6.duchengjiu.top/shop/api_goods.php",
+			data:{page:$page,pagesize:32},
+			success:function(data){
+				console.log(data);
+				data=data.data;
+				for(var i=0;i<data.length;i++){
+					var $str="<figure><a href='product.html?"+data[i].goods_id+"'><img src='"+data[i].goods_thumb+"'/></a><figcaption><a href='product.html?"+data[i].goods_id+"'>"+data[i].goods_name+"</a></figcaption><p>"+data[i].price+"</p><div>加入购物车</div></figure>";
+					$(".rank_content").append($str);
+				}
+			}
+		});
+		$(".turn_page").find("a").eq($page-1).addClass("hhover").siblings().removeClass("hhover")
+		
+		$(".rank_header").find("span").eq(0).html($page);
+		$("body,html").stop().animate({"scrollTop":0},100);	
+		
+	}
 	
 	
 	

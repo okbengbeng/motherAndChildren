@@ -44,8 +44,10 @@ header{
     width: 1000px;
     margin: 0 auto;
     padding: 20px 0;
+    overflow: hidden;
     aside{
         width: 198px;
+        float: left;
         .aside_up{
             border: 1px solid #ddd;
             background: #fff;
@@ -135,22 +137,120 @@ header{
                         }
                     }
                 }
-                
-                
+  
+            }
+            
+        } 
+    }
+    section{
+        width: 788px;
+        float: right;
+        background: #fff;
+        .rank_header{
+            height: 32px;
+            line-height: 32px;
+            background: #eee;
+            font-size: 14px;
+            &>div:first-child{
+                float: left;
+                a{
+                    padding: 5px 10px;
+                    background: #F5F5F5;
+                    &:first-child{
+                        background: orangered;
+                        color: #fff;
+                    }
+                }
+            }
+            &>div:last-child{
+                float: right;
+                span{
+                    &:first-child{
+                        color: red;
+                     
+                    }
+                }
+                a{
+                   padding: 5px 5px; 
+                }
+            }
+        }
+        .rank_content{
+            overflow: hidden;
+            figure{
+                width: 140px;
+                height: 300px;
+                padding: 15px;
+                float: left;
+                font-size: 12px;
+                margin: 13px;
+                &:hover{
+                    box-shadow: 1px 1px 2px 2px #ddd;
+                    
+                }
+                img{
+                    width: 140px;
+                }
+                figcaption{
+                    margin: 10px 0;
+                    height: 70px;
+                }
+                p{
+                    font-size: 20px;
+                    color: red;
+                    margin-bottom: 5px;
+                    margin-left: 10px;
+                }
+                div{
+                    width: 80px;
+                    height: 30px;
+                    line-height: 30px;
+                    background: orangered;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 14px;
+                    border-radius: 5px;
+                    margin-left: 10px;
+                    
+                }
+            } 
+        }
+        ul{
+            height: 35px;
+            background: #eee;
+            overflow: hidden;
+            padding: 10px 0 0 10px;
+            li{
+                float: left;
+                height: 25px;
+                line-height: 25px;
+                font-size: 12px;
+                &:first-child,&:last-child{
+                    padding: 0 10px;
+                    border: 1px solid #333;
+                };
+                &:nth-of-type(2){
+                    padding: 0 5px;
+                    a{
+                        display: inline-block;
+                        height: 25px;
+                        line-height: 25px;
+                        padding: 0 5px ;
+                        border: 1px solid #333;
+                        background: #F5F5F5;
+                        
+                    }
+                    a.hhover{
+                            background: orangered;
+                            color: #fff;
+                        }
+                }
             }
             
         }
         
         
-        
-        
     }
-    
-    
-    
-    
-    
-    
 }
 
 
