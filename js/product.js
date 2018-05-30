@@ -1,5 +1,5 @@
 $(function(){
-	
+	//传入数据
 	var $goods_id=window.location.href.split('?')[1];
 	$.ajax({
 			type:"get",
@@ -57,7 +57,32 @@ $(function(){
 		$(this).prev().prev().val($products_num);
 	})
 	
-		
+	//购买信息存入cookie
+	$(".goods_showRight").find("li").eq(1).click(function(){
+		var $productsNum=Number($(".goods_showRight").find("input").val());
+		var $shopMssage=[{id:$goods_id,num:$productsNum}];
+		if($.cookie("shopMssage")==null){
+			$shopMssage=JSON.stringify($shopMssage);
+			$.cookie("shopMssage",$shopMssage);
+		}else{
+			var $cookie=$.cookie("shopMssage");
+			$cookie=JSON.parse($cookie);
+			for(var i=0;i<$cookie.length;i++){
+//				console.log($cookie[i].id==$shopMssage[0].id);
+				if($cookie[i].id==$shopMssage[0].id){
+					$cookie[i].num+=$shopMssage[0].num;
+					break;
+				}
+				if(i==$cookie.length-1&&$cookie[i].id!=$shopMssage[0].id){
+					$cookie.push($shopMssage[0]);
+					break;
+				}
+			}
+			$cookie=JSON.stringify($cookie);
+			$.cookie("shopMssage",$cookie);
+		}
+	})
+	
 	
 	
 	
