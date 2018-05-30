@@ -1,0 +1,1 @@
+$(function(){function t(){var t=$("body,html").scrollTop()+$(window).height()-56;t>$(".cartmain_center").offset().top+$(".cartmain_center").outerHeight()+2&&(t=$(".cartmain_center").offset().top+$(".cartmain_center").outerHeight()+2),$(".paying").css({top:t})}t(),window.onresize=window.onscroll=function(){t()}});

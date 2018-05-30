@@ -6,9 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/comment.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/aside.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/productList.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/product.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/shopCart.css"/>
 		<script src="../js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body style="background: #eee;">
@@ -141,112 +139,51 @@
 				<div class="logo">
 					<a href="../index.html"><img src="../images/logo29new.png"/></a>
 				</div>
-				<div class="header_right">
-					<div>
-						<input type="text" name="header_text" id="header_text" placeholder="搜索 母婴之家 商品/品牌" />
-						<input type="button" name="header_btn" id="header_btn" />
-					</div>
-					<p>热门搜索：<a>爱他美</a><a>美德乐</a><a>口罩</a><a>保温杯</a><a>澳洲直邮</a><a>睡袋</a><a>暖奶器</a><a>奶瓶</a></p>
-				</div>
-				<div class="shopping">
-					<span></span>
-					购物车
-					<span>0</span>
-				</div>	
+				<div></div>
 			</header>	
 		</div>
-		<!--nav-->
-		<div id="nav_wrap">
-			<nav>
+		<!--cart_main-->
+		<div id="cart_main">
+			<div class="cartmain_top">
+				<h3>我的购物车</h3>
+				<div>立即<span>[登录]</span>，可将商品永久保存在购物车中</div>
+			</div>
+			<div class="cartmain_center">
+				<div>
+					<h3><a href="">母婴之家商城</a><span>母婴之家商城购物车</span></h3>
+					<div>单价（元）</div>
+					<div>数量（件）</div>
+					<div>小计（元）</div>
+					<div>操作</div>
+				</div>
 				<ul>
 					<li>
-						<a href="">全部商品分类<span></span><span></span></a>
-						<!--弹出菜单-->
-						<div class="products">
-							<ul>
-								<li><b></b>妈妈专区<span></span></li>
-								<li><b></b>哺乳喂养<span></span></li>
-								<li><b></b>奶粉辅食<span></span></li>
-								<li><b></b>纸尿裤湿巾<span></span></li>
-								<li><b></b>洗护用品<span></span></li>
-								<li><b></b>宝宝服饰<span></span></li>
-								<li><b></b>童车座椅<span></span></li>
-								<li><b></b>玩具<span></span></li>
-								<li><b></b>床椅寝具<span></span></li>
-							</ul>
-							<div class="products_right">
-								<div class="products_content">
-									<div>
-										<h4>孕妇内衣</h4>															
-										<a href="">吸奶器</a>
-									</div>	
-								</div>
-								<div class="products_pic">
-								</div>
-							</div>
-						</div>						
+						<div><a href=""><img src="../images/19337_01_01.jpg"/></a></div>
+						<p>Nutrilon诺优能3段幼儿配方奶粉（12-36个月）800g（荷兰原装进口）</p>
 					</li>
-					<li><a href="">首页</a></li>
-					<li><a href="">幸运星期一</a></li>
+					<li>¥150.00</li>
 					<li>
-						<a href="">直邮专区</a>
-						<div>
-							<a href="">欧洲直邮</a>
-						</div>
+						<span>-</span>
+						<input type="text" value="1" />
+						<span>+</span>
 					</li>
-					<li><a href="">品牌专区</a></li>
-					<li><a href="">会员俱乐部</a></li>
+					<li>￥150.00</li>
+					<li><a>删除</a></li>
 				</ul>
-			</nav>
-		</div>
-		
-		<!--goods_show-->
-		<div id="goods_show">
-			<ul>
-				<li><a href="../index.html">首页</a></li>
-				<li>></li>
-				<li><a href=""></a></li>
-			</ul>
-			<div>
-				<div class="goods_showLeft">
-					<div>
-						<img src=""/>
-						<div>
-							
-						</div>
-					</div>
-					<div>
-						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
-						<div></div>
-					</div>
-					<div></div>
+				
+				
+			</div>
+			<div class="paying">
+				<a>清空购物车</a>
+				<div>
+					<p>共有<span>4 </span>件商品，总计(不含运费)：</p>
+					<span>700.00</span>
+					<a href="">确认订单</a>
 				</div>
-				<div class="goods_showRight">
-					<h3>adwqjrlanfieahfa</h3>
-					<p>促销价<span>￥220.00</span></p>
-					<ul>
-						<li>
-							<input type="text" value="1" />
-							<span></span>
-							<span></span>
-						</li>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
-					<div>说明：  出库15天内可退货</div>
-				</div>
-							
-			</div>	
+				
+			</div>
+				
 		</div>
-		
 		<!--footer-->
 		<footer>
 			<div class="footer_wrap1">
@@ -337,10 +274,9 @@
 		</footer>
 	</body>
 	<script src="../js/aside.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/carousel.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../js/base.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../js/submit.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/productList.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/product.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/shopCart.js" type="text/javascript" charset="utf-8"></script>
 </html>
+
 
