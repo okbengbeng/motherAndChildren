@@ -46,7 +46,6 @@ $(function(){
 			url:"http://h6.duchengjiu.top/shop/api_goods.php",
 			data:{page:$page,pagesize:32},
 			success:function(data){
-				console.log(data);
 				data=data.data;
 				for(var i=0;i<data.length;i++){
 					var $str="<figure><a href='product.html?"+data[i].goods_id+"'><img src='"+data[i].goods_thumb+"'/></a><figcaption><a href='product.html?"+data[i].goods_id+"'>"+data[i].goods_name+"</a></figcaption><p>"+data[i].price+"</p><div>加入购物车</div></figure>";
