@@ -43,10 +43,12 @@ $(function(){
 	})
 	
 	//弹出购物框
-	$(".shopping").hover(function(){
-		console.log("bb")
+	$(".shopping").hover(function(e){
+		var evt=e||event;
+		evt.cancelBubble=true;
+		console.log("bb");
 		$(".shopping").children("div").children().eq(0).empty();
-		$(this).children("div").fadeToggle(30);
+		$(this).children("div").fadeToggle();
 		if($.cookie("shopMssage")!=null){
 			var $cookie=$.cookie("shopMssage");
 			$cookie=JSON.parse($cookie);
@@ -78,9 +80,8 @@ $(function(){
 	})
 	
 	//删除物品
-	
+	$('.shopping').unbind('click');
 	$(".shopping").children("div").on("click",".del1",function(){
-		console.log($(this).parent().parent().html());
 //		$(this).parent().parent().remove();
 		console.log("aabb");
 	})
