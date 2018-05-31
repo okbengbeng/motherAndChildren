@@ -6,7 +6,7 @@ header{
     .header_right{
         margin-left: 50px;
     }
-    .shopping{
+    .shopping1{
         width: 156px;
         height: 42px;
         line-height: 42px;
@@ -17,7 +17,7 @@ header{
         color: #fff;
         margin-left: 80px;
         position: relative;
-        span{
+        &>span{
             position: absolute;
             display: block;
             width: 30px;
@@ -34,10 +34,6 @@ header{
                 right: 17px;
                 top: 7px;
             }
-        }
-        &>div{
-            position: absolute;
-            width: ;
         }
         
         

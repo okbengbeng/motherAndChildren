@@ -59,7 +59,13 @@ $(function(){
 		$("body,html").stop().animate({"scrollTop":0},100);	
 		
 	}
-	
+	//点击购物车跳转页面
+	if($.cookie("shopMssage")!=null){
+		for(var i=0;i<$cookie.length;i++){
+			
+		}
+	}
+	$(".shopping1").find("span").eq(1).html()
 	
 	
 })

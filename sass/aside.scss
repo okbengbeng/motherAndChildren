@@ -17,7 +17,7 @@ $li-position:(
     font-size: 16px;
     background: #fff;
     //滑动变色
-    li{
+    &>ul>li{
         width: 37px;
         padding-top: 5px;
         position: absolute;
@@ -48,12 +48,88 @@ $li-position:(
                 }
             };           
         }  
-        &li:last-child{
+        &:last-child{
             bottom: 0;
         }
+        &:nth-child(2){
+            &>div{
+                max-height: 400px;
+                overflow-y: scroll;
+                display: none;
+                position: absolute;
+                left: -420px;
+                top: 0;
+                border: 2px solid orangered;
+                background: white;
+                z-index: 3;
+                color: #333333;
+                padding-top: 20px;
+                ul{
+                    width: 400px;
+                    height:60px;
+                    padding: 5px 0;
+                    border-bottom:1px dashed #ddd;
+                    li{
+                        float: left;
+                        height: 60px;
+                        margin: 0 5px; 
+                        &:nth-child(1){
+                            width: 60px;
+                            img{
+                                width: 60px;
+                                height: 60px;
+                            }
+                        }
+                        &:nth-child(2){
+                            text-align: left;
+                            line-height: 20px;
+                            font-size: 12px;
+                            width: 200px;
+                        }
+                        &:nth-child(3){
+                            line-height: 20px;
+                            font-size: 12px;
+                            width: 90px;
+                            span{
+                                display: block;
+                                &:nth-child(1){
+                                    color: red;
+                                    margin-top: 10px;
+                                }
+                            } 
+                        }
+                    }
+                }
+                &>div:last-child{
+                    width: 400px;
+                    height: 60px;
+                    line-height: 60px;
+                    p{
+                        float: left;
+                        width: 280px;
+                        text-align: center;
+                        span{
+                            color: red;
+                            font-size: 20px;
+                        }
+                    }
+                    a{
+                        display: block;
+                        margin-top: 10px;
+                        text-align: center;
+                        width: 70px;
+                        height: 36px;
+                        line-height: 36px;
+                        color: #fff;
+                        float: left;
+                        background: orangered;
+                        border: 1px solid red;
+                    }
+                }
+            }
+        }
         
-        
-        
+  
     }
     //弹出框
     .aside_top{

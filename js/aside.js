@@ -18,8 +18,6 @@ $(function(){
 		.find(".asid_pic").css({"background-position-x":0})
 	}).eq(5).click(function(){
 		$("body,html").stop().animate({"scrollTop":0});
-		
-		
 	});
 	//aside高度自动变化
 	$("#aside").height($(window).height());
@@ -44,6 +42,35 @@ $(function(){
 		$("body,html").stop().animate({"scrollTop":$scrollTop});
 	})
 	
-	
-	
+	//弹出购物框
+	$(".shopping").hover(function(){
+		$(".shopping").children("div").children().eq(0).empty();
+		$(this).children("div").fadeToggle(30);
+		if($.cookie("shopMssage")!=null){
+			var $cookie=$.cookie("shopMssage");
+			$cookie=JSON.parse($cookie);
+			var $str="";
+			var $lastNum=0;
+			var $lastPrice=0;
+			for(var i=0;i<$cookie.length;i++){
+				(function(n){
+					$.ajax({
+						type:"get",
+						url:"http://h6.duchengjiu.top/shop/api_goods.php",
+						data:{goods_id:$cookie[n].id},
+						success:function(data){							
+							data=data.data[0];
+							$str="<ul><li><img src='"+data.goods_thumb+"'/></li><li><a>"+data.goods_name+"</a></li><li><span>"+data.price+"x"+$cookie[n].num+"</span><span>[ 删除 ]</span></li></ul>";
+							$(".shopping").children("div").children().eq(0).append($str);
+							$lastNum+=$cookie[n].num;
+							$lastPrice+=data.price*$cookie[n].num;
+							$(".shopping").children("div").children().eq(1).find("span").eq(0).html($lastNum).next().html($lastPrice);
+							
+						}
+					});	
+				})(i);
+			}
+		}	
+	})
+
 })

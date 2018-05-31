@@ -154,7 +154,7 @@ header{
     height: 64px;
     margin: 27px auto;
     font-size: 12px;
-    ul{
+    &>ul{
         float: left;
         margin-left:90px ;
         li{
@@ -243,6 +243,9 @@ nav{
     height: 36px;
     font-size: 14px;
     position: relative;
+    &>ul{
+        height: 36px;
+    }
     &>ul>li{
         float: left;
         position:relative; 
