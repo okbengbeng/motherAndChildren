@@ -19,6 +19,7 @@ header{
 //cart_main
 #cart_main{
     margin: 0 auto;
+    padding-bottom: 80px;
     .cartmain_top{
         height: 47px;
         margin-bottom: 10px;
@@ -48,7 +49,6 @@ header{
     .cartmain_center{
         border: 1px solid #ddd;
         background: #fff;
-        margin-bottom: 80px;
         &>div{
             height: 44px;
             line-height: 44px;
@@ -158,11 +158,6 @@ header{
     }
     
     .paying{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
         width: 998px;
         height: 56px;
         border: 1px solid #c0c0c0;

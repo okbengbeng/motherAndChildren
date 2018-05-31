@@ -44,6 +44,7 @@ $(function(){
 	
 	//弹出购物框
 	$(".shopping").hover(function(){
+		console.log("bb")
 		$(".shopping").children("div").children().eq(0).empty();
 		$(this).children("div").fadeToggle(30);
 		if($.cookie("shopMssage")!=null){
@@ -57,10 +58,11 @@ $(function(){
 					$.ajax({
 						type:"get",
 						url:"http://h6.duchengjiu.top/shop/api_goods.php",
+						async: false,
 						data:{goods_id:$cookie[n].id},
 						success:function(data){							
 							data=data.data[0];
-							$str="<ul><li><img src='"+data.goods_thumb+"'/></li><li><a>"+data.goods_name+"</a></li><li><span>"+data.price+"x"+$cookie[n].num+"</span><span>[ 删除 ]</span></li></ul>";
+							$str="<ul><li><img src='"+data.goods_thumb+"'/></li><li><a>"+data.goods_name+"</a></li><li><span>"+data.price+"x"+$cookie[n].num+"</span><span class='del1'>[ 删除 ]</span></li></ul>";
 							$(".shopping").children("div").children().eq(0).append($str);
 							$lastNum+=$cookie[n].num;
 							$lastPrice+=data.price*$cookie[n].num;
@@ -71,6 +73,17 @@ $(function(){
 				})(i);
 			}
 		}	
+		
+		
 	})
-
+	
+	//删除物品
+	
+	$(".shopping").children("div").on("click",".del1",function(){
+		console.log($(this).parent().parent().html());
+//		$(this).parent().parent().remove();
+		console.log("aabb");
+	})
+	
+	
 })

@@ -60,7 +60,13 @@ $(function(){
 	//购买信息存入cookie
 	$(".goods_showRight").find("li").eq(1).click(function(){
 		var $productsNum=Number($(".goods_showRight").find("input").val());
+		//购物车数量增加
+		$(".shopping1").find("span").eq(1).html($productsNum+Number($(".shopping1").find("span").eq(1).html()));
 		var $shopMssage=[{id:$goods_id,num:$productsNum}];
+		addproduct($shopMssage);	
+	})
+	//存cookie封装
+	function addproduct($shopMssage){
 		if($.cookie("shopMssage")==null){
 			$shopMssage=JSON.stringify($shopMssage);
 			$.cookie("shopMssage",$shopMssage,{expires:7,path:'/'});
@@ -81,8 +87,7 @@ $(function(){
 			$.cookie("shopMssage",$cookie,{expires:7,path:'/'});
 		}
 		
-	})
-	
+	}
 	
 	
 	
